@@ -27,6 +27,7 @@ links:
 login:
   #the brand to use, oss or pivotal for JSP pages
   brand: pivotal
+  autoRedirect: true
   #base URL that the login server can be reached at
   url: http://localhost:8080/login
   # The entity base url is the location of this application
