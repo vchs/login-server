@@ -88,7 +88,7 @@ public class OpenIdUserDetailsService implements AuthenticationUserDetailsServic
 			lastName = names.length > 1 ? names[1] : "User";
 		}
 
-		UaaUser user = new UaaUser(email, generator.generate(), email, firstName, lastName);
+		UaaUser user = new UaaUser(email, generator.generate(), null, email, firstName, lastName);
 		return new UaaUserDetails(user);
 	}
 }
