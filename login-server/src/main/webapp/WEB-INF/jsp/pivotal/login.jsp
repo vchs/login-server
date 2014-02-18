@@ -25,6 +25,7 @@
 <!DOCTYPE html>
 <html class='no-js' dir='ltr' lang='en'>
 <head>
+<c:if test="${!autoRedirect}">
 <title>Cloud Foundry</title>
 <meta charset='utf-8'>
 <meta content='IE=edge,chrome=1' http-equiv='X-UA-Compatible'>
@@ -76,11 +77,10 @@
 <script>
   try { Typekit.load(); } catch (e) { }
 </script>
+</c:if>
 <c:if test="${autoRedirect}">
    <script type="text/javascript">
-	   setTimeout(function () {
-	      window.location.href = "saml/discovery?returnIDParam=idp&entityID=${entityID}";
-	   }, 5);
+	window.location.href = "saml/discovery?returnIDParam=idp&entityID=${entityID}";
    </script>
 </c:if>
 </head>

@@ -624,11 +624,5 @@
         </constructor-arg>
     </bean>
   </beans>
-  
-  
-    <beans profile="ldap">
-        <import resource="${ldap.profile.file:ldap/ldap-simple-bind.xml}" />
-    </beans>
-  
-	
+  	
 </beans>
